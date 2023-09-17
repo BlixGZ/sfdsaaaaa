@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Declaração de Amor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        h1 {
+            color: #ff2e63;
+            font-size: 36px;
+        }
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .hearts {
+            font-size: 48px;
+            color: #ff2e63;
+        }
+        .audio-player-container {
+            position: relative;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .audio-player {
+            width: 100%;
+            max-width: 300px;
+            background-color: #ffffff; /* Cor branca */
+            border: 3px solid #ff2e63; /* Borda vermelha */
+            border-radius: 3px;
+            overflow: hidden;
+            position: relative;
+        }
+        audio {
+            width: 100%;
+            display: block;
+        }
+        .song-title {
+            font-size: 17px;
+            color: #ff2e63;
+            margin: 0;
+            padding: 10px 15px;
+            text-align: center;
+            position: relative;
+        }
+        .song-description {
+            font-size: 14px;
+            color: #ff2e63;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            position: absolute;
+            top: -23px; /* Posição acima da borda superior do player */
+            left: 0;
+            right: 0;
+        }
+        .decorations {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+        .decoration-heart {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            opacity: 0.7;
+            animation: float 6s infinite linear;
+            transform: scale(0.8);
+        }
+        .decoration-heart::before {
+            content: '❤️'; /* Emoji de coração */
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        /* Corações flutuantes */
+        .decoration-heart:nth-child(13) {
+            top: 10%;
+            left: 10%;
+        }
+        .decoration-heart:nth-child(14) {
+            top: 20%;
+            right: 20%;
+        }
+        .decoration-heart:nth-child(15) {
+            top: 40%;
+            left: 50%;
+        }
+        .decoration-heart:nth-child(16) {
+            top: 60%;
+            right: 10%;
+        }
+        .decoration-heart:nth-child(17) {
+            top: 80%;
+            left: 30%;
+        }
+        .decoration-heart:nth-child(18) {
+            top: 15%; 
+            left: 40%;
+        }
+        .decoration-heart:nth-child(19) {
+            top: 45%;
+            right: 5%;
+        }
+        .decoration-heart:nth-child(20) {
+            top: 70%;
+            left: 60%;
+        }
+        .decoration-heart:nth-child(21) {
+            top: 5%;
+            left: 80%;
+        }
+        .decoration-heart:nth-child(22) {
+            top: 35%;
+            right: 15%;
+        }
+        .decoration-heart:nth-child(23) {
+            top: 55%;
+            left: 20%;
+        }
+        .decoration-heart:nth-child(24) {
+            top: 85%;
+            right: 40%;
+        }
+        /* Fim de corações flutuantes */
+        @keyframes float {
+            0% {
+                transform: translateY(0) scale(0.8);
+            }
+            50% {
+                transform: translateY(-20px) scale(1);
+            }
+            100% {
+                transform: translateY(0) scale(0.8);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="decorations">
+            <!-- Corações flutuantes -->
+            <div class="decoration-heart" style="top: 10%; left: 10%;"></div>
+            <div class="decoration-heart" style="top: 20%; right: 20%;"></div>
+            <div class="decoration-heart" style="top: 40%; left: 50%;"></div>
+            <div class="decoration-heart" style="top: 60%; right: 10%;"></div>
+            <div class="decoration-heart" style="top: 80%; left: 30%;"></div>
+            <div class="decoration-heart" style="top: 15%; left: 40%;"></div>
+            <div class="decoration-heart" style="top: 45%; right: 5%;"></div>
+            <div class="decoration-heart" style="top: 70%; left: 60%;"></div>
+            <div class="decoration-heart" style="top: 5%; left: 80%;"></div>
+            <div class="decoration-heart" style="top: 35%; right: 15%;"></div>
+            <div class="decoration-heart" style="top: 55%; left: 20%;"></div>
+            <div class="decoration-heart" style="top: 85%; right: 40%;"></div>
+            <!-- Fim de corações flutuantes -->
+        </div>
+        <h1>Meu amor por você</h1>
+        <div class="audio-player-container">
+            <p class="song-description">Aqui tem uma musiquinha caso queira ouvir</p>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="https://cdn.discordapp.com/attachments/1152808497239572635/1152827608904511498/Ed_Sheeran_-_Perfect.mp3" type="audio/mpeg">
+                </audio>
+                <p class="song-title">Foi a primeira música que consegui pensar kkk</p>
+            </div>
+        </div>
+        <p>Querida Isadora, aqui vou falar um pouco (mas bastante) sobre todo meu amor por você e algumas coisas que eu já queria ter contado pra você.</p>
+        <p>O primeiro dia que vi você foi na escola, e desde esse primeiro dia que te vi eu te achei muito bonita, só que nunca falei isso pra ninguém, e com o passar do tempo eu fui começando gostar de você, até o dia 07/12/2022 eu apenas gostava, mas a partir desse dia eu acho que me apaixonei por você só que você tinha falado que o Pedro tinha se declarado pra você e você disse que ele estava confundindo as coisas, então achei que eu estava confundindo as coisas também, ai então as aulas acabaram e eu não via você então nem pensei muito em você nas férias, mas quando as aulas voltaram eu vi você novamente e eu percebi que ainda gostava muito de você, só que eu não tinha coragem de falar isso pra ninguém. Teve um dia que estavamos apresentando algum trabalho pra outras turmas e o Pedro estava abraçando você, achei meio estranho pois no final do ano passado vocês tiveram aquela discussão na sala mas nem liguei muito pra aquilo, mas no dia 25/05/2023, o dia que fomos com a escola pra usina hidrelétrica Machadinho, depois que nós chegamos na escola aquele dia, eu e mais uns colegas (falei colegas porque só lembro que o Andrey, o Kauan e o Mascarello estavam junto, mas tinha mais gente kkk) fomos pro centro, mas no caminho você passou do outro lado da rua e o Andrey falou que você estava indo ver o seu namorado, por um momento eu não consegui acreditar que você estava namorando então pedi pra ele falar sério, e ele falou bem sério que era verdade que você estava namorando, naquele momento eu senti uma sensação tão estranha, não sei explicar muito bem, mas perdi meu ânimo e toda a felicidade que tinha acumulado naquela manhã e tarde antes de receber essa informação de que você estava namorando. Depois disso eu só queria voltar pra casa mas eles estavam jogando no campinho de areia e não queriam ir, e eu não queria voltar pra casa sozinho, então chamei o Andrey e ele falou que só ia se eu comprasse um sorvete pra ele, (ele me deu dois reais e falou pra mim pagar o resto que ele me devolvia o dinheiro, até hoje ele não devolveu kkkk) eu comprei o sorvete e fomos embora, ja tinha quase todo mundo ido pra suas casas menos eu, o Kauan e o Mascarello, então nós paramos em um mercadinho e compramos uma latinha de refrigerante pra cada, depois saimos daquele mercadinho e cada um foi pra um lado e pra sua casa, eu fui pra minha casa, fui bebendo aquela lata de coca e pensando naquilo que o Andrey tinha falado, fiquei bravo comigo mesmo por ter demorado muito para ter falado que gostava de você e chegou alguém antes de mim, mas eu não podia fazer nada, então só terminei de beber a coca e amassei a latinha e joguei em uma lixeira que tinha em uma casa aleatória, ai cheguei em casa e fui jogar um assetto corsa pra esquecer as coisas ruins do dia (até hoje o assetto corsa me serve pra isso kkkk), mas ai chegou a hora de dormir, mas não consegui dormir direito aquela noite pois fiquei pensando naquilo.</p>
+        <p>Depois das férias eu e o Guipson tinhamos parado de se falar, mas depois voltamos a se falar e ir jogar bola juntos, ai depois de um tempo eu estava muito amigo dele novamente, então pela primeira vez eu falei pra alguém que eu gostava de você, falei pro guipson, e ele perguntou se você sabia e eu disse que não, e ele perguntou quando eu ia contar e eu disse que achava que nunca kkkk, ai ele mudou de assunto e fomos jogar bola, no dia seguinte de eu ter contado pro guipson que eu gostava de você, eu chego na escola, a princípio pra mim era mais um dia normal, até o Luiz chegar e perguntar pra mim se eu ficaria com você, achei muito estranho a pergunta meio do nada mas respondi que sim, achei muito estranho mesmo, pq no dia seguinte que eu falei pela primeira vez pra algúem que eu gostava de você o Luiz vem e me pergunta isso, até hoje eu não sei se o guipson tem envolvimento nisso, ele disse que não mas tenho minhas dúvidas. A partir desse dia tudo mudou, eu perguntei pra você se você queria sair comigo e você disse sim, eu nem acreditei quando você disse sim, então nós saimos pela primeira vez, confesso que aquele dia pensei que você não ia, foram 5 minutos que fiquei esperando mas parecia 5 horas, eu estava muito nervoso, mas então você chegou, fiquei mais tranquilo porque você tinha chegado mas também mais nervoso porque você tinha chegado também kkk, você chegou tão linda como você sempre está e eu não sabia como agir, mas tomamos o açaí e vocês foram imprimir umas folhas e depois fomos no Paulo Blasi, e eu acompanhei você porque queria passar o máximo de tempo com você, ai depois fomos pro parquinho com o Murilo (acho que é esse o nome, não lembro muito bem kkk) pois ele queria brincar, ai depois quando a gente tava saindo do parquinho a gente se abraçou, foi tão bom aquele abraço, todas as vezes que te abracei foram ótimas mas aquela foi especial, pois foi a primeira vez que se abraçamos, depois voltamos cada um pra sua casa e eu fui com você até um pouco antes da escola, ai lá teve outro abraço, outro momento ótimo, naquele dia estava tudo muito bom, eu voltei pra casa sorrindo e mais feliz que o normal, parecia que tudo estava melhor, aquele dia eu cheguei em casa e não fui jogar assetto corsa, eu só queria pensar em você e relembrar como foi bom o dia com você.</p>
+        <p>Depois disso teve muito mais coisas, só que isso já está muito grande e também está meio tarde já então vou dar uma resumida. Mas depois disso a gente foi se aproximando mais e a cada dia que passa eu me apaixono mais por você, não tem um dia que eu não pense em você, penso o dia todo, depois que a gente começou se falar tudo melhorou na minha vida, você mudou tudo, e pra melhor, eu te amo muito, parece que estou vivendo em um sonho, eu nunca imaginei que um dia a gente estaria namorando, nos primeiros dias que a gente começou se falar nem parecia que a vida era real, parecia que eu estava vivendo realmente em um sonho, é tão bom falar com você e estar com você, você é a melhor pessoa que eu poderia ter conhecido em toda minha vida, eu nunca senti por ninguém o que eu sinto por você, eu te amo mais do que as palavras podem expressar, sua presença na minha vida é um presente que eu valorizo acima de tudo, não sei se ja falei isso nesse texto mas se falei vou repetir, mas cada momento que passamos juntos, cada segundo é muito valioso pra mim, e quando estou junto de você o tempo passa e eu nem vejo, aquele dia que fui fazer o trabalho de ciências na sua casa as horas passaram muito rápido, cheguei acho que as 14 e quando vi já eram acho que 18 horas, quando estou com você o tempo voa e eu nem percebo, você é a razão do meu sorriso todos os dias e a inspiração por trás de todos os meus sonhos, sempre que vejo seu rosto, meu dia melhora 100%, só de ouvir sua voz já melhora, o brilho dos seus olhos ilumina qualquer dia sem luz na minha vida, e quando você me abraça, parece que estou no céu de tão bom que é abraçar você, obrigado por você existir, eu te amo muito ❤️</p>
+        <p>Desculpa se tiver alguma coisa escrita errada, com certeza tem, está tarde e estou sem meus óculos aqui kkk, e desculpa também por tanta coisa escrita, mas são várias coisas que queria ter te falado já, </p>
+        <p>Com todo o meu amor, assinado digitalmente, Carlos :)</p>
+    </div>
+</body>
+</html>
